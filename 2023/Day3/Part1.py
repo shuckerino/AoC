@@ -22,21 +22,18 @@ def check_line_above(val, idx):
 
 file = open("Input.txt", "r")
 
-
 content = file.read()
-
 
 sum = 0
 count = 0
 
-
 for num in get_numbers(content):
     value = str(num)
     idx = content.strip().replace("\n", "").find(value)
-    print(num + ": Index is {index}".format(index = idx))
+    print(num + ": Index is {index}".format(index=idx))
     if content[idx - 1] != '.' and content[idx + len(value)] != '.':
         print("Current line was already enough with number {number} and Index before: {idx1} and index after: {idx2}"
-              .format(number=num, idx1=content[idx-1], idx2 = content[idx + len(value)]))
+              .format(number=num, idx1=content[idx-1], idx2=content[idx + len(value)]))
         sum += int(num)
         count += 1
     else:
@@ -56,5 +53,3 @@ for num in get_numbers(content):
 
 
 print(sum)
-
-
