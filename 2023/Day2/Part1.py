@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 with open("Input.txt") as file:
     games = [i.split(':')[1] for i in file.read().strip().split("\n")]
 
